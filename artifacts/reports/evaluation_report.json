@@ -1,0 +1,44 @@
+{
+  "class_names": [
+    "COVID19",
+    "NORMAL"
+  ],
+  "threshold": 0.5,
+  "confusion_matrix": [
+    [
+      166,
+      1
+    ],
+    [
+      7,
+      310
+    ]
+  ],
+  "classification_report": {
+    "COVID19": {
+      "precision": 0.9595375722543352,
+      "recall": 0.9940119760479041,
+      "f1-score": 0.9764705882352941,
+      "support": 167.0
+    },
+    "NORMAL": {
+      "precision": 0.9967845659163987,
+      "recall": 0.9779179810725552,
+      "f1-score": 0.9872611464968153,
+      "support": 317.0
+    },
+    "accuracy": 0.9834710743801653,
+    "macro avg": {
+      "precision": 0.978161069085367,
+      "recall": 0.9859649785602297,
+      "f1-score": 0.9818658673660547,
+      "support": 484.0
+    },
+    "weighted avg": {
+      "precision": 0.9839328139710174,
+      "recall": 0.9834710743801653,
+      "f1-score": 0.9835379580057532,
+      "support": 484.0
+    }
+  }
+}

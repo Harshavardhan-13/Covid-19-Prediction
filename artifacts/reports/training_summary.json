@@ -1,0 +1,20 @@
+{
+  "class_names": [
+    "COVID19",
+    "NORMAL"
+  ],
+  "image_size": [
+    224,
+    224
+  ],
+  "batch_size": 32,
+  "epochs_run": 18,
+  "class_weight": null,
+  "test_metrics": {
+    "accuracy": 0.9834710955619812,
+    "auc": 0.9960804581642151,
+    "loss": 0.06690311431884766,
+    "precision": 0.9967845678329468,
+    "recall": 0.9779179692268372
+  }
+}
