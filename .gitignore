@@ -1,0 +1,7 @@
+artifacts/models/*.keras
+artifacts/logs/
+__pycache__/
+*.pyc
+.DS_Store
+model.h5
+DataSet
