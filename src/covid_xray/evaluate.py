@@ -11,7 +11,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Evaluate a trained COVID-19 X-ray model.")
     parser.add_argument("--model-path", type=Path, default=Path("artifacts/models/best_model.keras"))
-    parser.add_argument("--data-dir", type=Path, default=Path("../covid-19/DataSet/Data/test"))
+    parser.add_argument("--data-dir", type=Path, default=Path("DataSet/Data/test"))
     parser.add_argument("--class-map", type=Path, default=Path("artifacts/reports/class_mapping.json"))
     parser.add_argument("--output-dir", type=Path, default=Path("artifacts/reports"))
     parser.add_argument("--image-size", type=int, nargs=2, default=(224, 224))
