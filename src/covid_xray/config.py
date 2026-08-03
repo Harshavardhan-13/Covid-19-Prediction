@@ -8,7 +8,7 @@ from pathlib import Path
 class ProjectConfig:
     """Default project paths and training settings."""
 
-    data_dir: Path = Path("../covid-19/DataSet/Data")
+    data_dir: Path = Path("DataSet/Data")
     output_dir: Path = Path("artifacts")
     image_size: tuple[int, int] = (224, 224)
     batch_size: int = 32
