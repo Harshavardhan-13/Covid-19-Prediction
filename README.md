@@ -83,7 +83,31 @@ python -m covid_xray.predict \
   --model-path artifacts/models/best_model.keras
 ```
 
-## Original Notebook Result
+## Results
+
+Evaluated on the held-out test set of 484 chest X-rays (167 COVID-19, 317 normal) using `best_model.keras` at a 0.5 threshold.
+
+| Metric | Value |
+| --- | ---: |
+| Test accuracy | 98.35% |
+| ROC-AUC | 0.996 |
+| Weighted F1 | 0.984 |
+| COVID-19 recall | 99.4% (166 of 167) |
+| COVID-19 precision | 96.0% |
+| Normal recall | 97.8% (310 of 317) |
+
+**Confusion matrix (rows = actual, columns = predicted)**
+
+|  | Predicted COVID-19 | Predicted Normal |
+| --- | ---: | ---: |
+| **Actual COVID-19** | 166 | 1 |
+| **Actual Normal** | 7 | 310 |
+
+Full metrics are saved in `artifacts/reports/evaluation_report.json` and `artifacts/reports/training_summary.json`.
+
+> Research and learning prototype only. Not for clinical diagnosis.
+
+## Original Notebook Result (earlier custom CNN)
 
 The original notebook trained a custom CNN for 35 epochs and reported:
 
