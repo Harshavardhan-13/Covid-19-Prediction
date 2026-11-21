@@ -8,3 +8,5 @@ DataSet
 covid-19 old
 Codex.rtf
 .Rhistory
+*.egg-info/
+artifacts/matplotlib/
