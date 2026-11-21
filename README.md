@@ -7,7 +7,7 @@ clinical diagnosis.
 ## Project Structure
 
 ```text
-../covid-19/DataSet/Data/
+DataSet/Data/
   train/
     COVID19/
     NORMAL/
@@ -79,7 +79,7 @@ artifacts/reports/evaluation_report.json
 
 ```bash
 python -m covid_xray.predict \
-  "../covid-19/DataSet/Data/test/COVID19/COVID19(8).jpg" \
+  "DataSet/Data/test/COVID19/COVID19(8).jpg" \
   --model-path artifacts/models/best_model.keras
 ```
 

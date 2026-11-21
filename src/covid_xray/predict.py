@@ -7,13 +7,20 @@ from pathlib import Path
 import numpy as np
 
 
+def threshold(value: str) -> float:
+    parsed_value = float(value)
+    if not 0.0 <= parsed_value <= 1.0:
+        raise argparse.ArgumentTypeError("threshold must be between 0 and 1")
+    return parsed_value
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Predict COVID-19 vs normal from one X-ray image.")
     parser.add_argument("image_path", type=Path)
     parser.add_argument("--model-path", type=Path, default=Path("artifacts/models/best_model.keras"))
     parser.add_argument("--class-map", type=Path, default=Path("artifacts/reports/class_mapping.json"))
     parser.add_argument("--image-size", type=int, nargs=2, default=(224, 224))
-    parser.add_argument("--threshold", type=float, default=0.5)
+    parser.add_argument("--threshold", type=threshold, default=0.5)
     return parser.parse_args()
 
 

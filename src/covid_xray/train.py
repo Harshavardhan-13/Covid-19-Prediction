@@ -14,7 +14,7 @@ def parse_args() -> argparse.Namespace:
         "--data-dir",
         type=Path,
         default=cfg.data_dir,
-        help="Dataset root with train/ and test/ folders. Defaults to ../covid-19/DataSet/Data.",
+        help="Dataset root with train/ and test/ folders. Defaults to DataSet/Data.",
     )
     parser.add_argument("--output-dir", type=Path, default=cfg.output_dir)
     parser.add_argument("--epochs", type=int, default=cfg.epochs)
